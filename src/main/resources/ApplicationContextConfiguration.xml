@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <bean name="address" class="com.asiainfo.bean.Address">
+        <constructor-arg name="city" value="Tianjin"/>
+        <constructor-arg name="street" value="Forth Avenue"/>
+    </bean>
+
+    <bean name="person" class="com.asiainfo.bean.Person">
+        <!--<constructor-arg name="name" value="yang"/>-->
+        <property name="name" value="yang"/>
+        <!--<constructor-arg name="address" ref="address"/>-->
+        <property name="address" ref="address"/>
+    </bean>
+
+</beans>
